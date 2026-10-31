@@ -20,6 +20,6 @@
     <path d="M206 128 L220 112" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5"/>
   </g>
   <text x="400" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#f8fafc">Mark<tspan fill="url(#accent)">Lift</tspan></text>
-  <text x="404" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" fill="#cbd5e1">Batch-remove the corner sparkle from AI images and videos. Locally.</text>
+  <text x="404" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" fill="#cbd5e1">Remove the Gemini / Veo watermark. 100% local, 100% private.</text>
   <text x="404" y="245" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#94a3b8" letter-spacing="2">BUILT THIS WAY</text>
 </svg>

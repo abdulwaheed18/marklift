@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-MarkLift - batch removal of the visible corner watermark (e.g. the Gemini /
-Nano Banana sparkle, Veo/Flow corner mark) from images and videos.
+MarkLift - batch removal of the visible corner watermark from Gemini images
+and Veo videos. Runs locally; nothing is uploaded.
 
 How it works
 ------------

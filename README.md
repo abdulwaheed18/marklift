@@ -10,9 +10,23 @@
 
 # MarkLift
 
-**MarkLift removes the visible corner watermark** (the Gemini / Nano Banana
-sparkle and the Veo / Flow corner mark) from a whole folder of images and
-videos, on your own computer. Nothing is uploaded anywhere.
+**MarkLift removes the visible corner watermark from Gemini images and Veo
+videos**, a whole folder at a time, on your own computer.
+
+> **Tested with:** Gemini-generated images and Veo-generated videos only.
+> Watermarks from other tools or generators are not supported.
+
+## Why MarkLift
+
+- 🔒 **Runs 100% locally.** Your images and videos never leave your computer.
+- 🚫 **No uploads.** No cloud service, no third-party website, no account,
+  no sign-up.
+- 🕶️ **Your files stay private.** Ideal for client work, unreleased content
+  or anything personal.
+- 📦 **Batch processing.** Clean a whole folder of images and videos in one go.
+- ✨ **No blur patch.** The original pixels under the mark are restored.
+
+## How it works
 
 It doesn't blur or smudge the corner. The mark is a semi-transparent logo
 blended on top of the picture, and MarkLift reverses that blend, so the
@@ -65,12 +79,13 @@ calibrate anything:
 
 | Source | Resolutions included |
 |---|---|
-| Gemini / Nano Banana images | 1200×896, 1536×2752, 2048×2048, 2752×1536 |
-| Veo / Flow videos | 1280×720, 720×1280, 1920×1080, 1080×1920 |
+| Gemini images | 1200×896, 1536×2752, 2048×2048, 2752×1536 |
+| Veo videos | 1280×720, 720×1280, 1920×1080, 1080×1920 |
 
-Other sizes still work: the mark is searched at any size in the corner and
-fitted to each file. A mask made at exactly your resolution is pixel-perfect,
-so if a size you use gives a faint outline, see [Calibrate](#calibrate-your-own-masks).
+For other Gemini or Veo sizes, the mark is searched at any size in the corner
+and fitted to each file. A mask made at exactly your resolution is
+pixel-perfect, so if a size you use gives a faint outline, see
+[Calibrate](#calibrate-your-own-masks).
 
 Check what you have with `python marklift.py masks`.
 
@@ -78,13 +93,14 @@ Check what you have with `python marklift.py masks`.
 
 - **Any resolution.** Position, size, strength, colour and edge sharpness of
   the mark are fitted per file (for videos, over ~15 frames).
-- **Several marks.** Image-to-video clips often carry the video mark *and* the
-  mark baked into the start image; up to 3 marks are removed.
+- **Several marks.** Veo image-to-video clips made from a Gemini image often
+  carry the video mark *and* the image mark baked into the start frame; up to
+  3 marks are removed.
 - **Marks that move with the scene** (a baked-in image mark while the camera
   moves or zooms) are tracked frame by frame.
 - **Edited videos.** Frames without the mark (cut-aways, titles) are left
   untouched.
-- **Faint outline from upscaling** (e.g. Flow's 1080p export) is detected and
+- **Faint outline from upscaling** (Veo 1080p exports) is detected and
   filled in.
 
 ## Command line
@@ -117,8 +133,8 @@ Lower `edge` means a cleaner fit.
 
 ## Calibrate your own masks
 
-Only needed for a resolution that isn't covered above, or if Google changes
-the mark.
+Only needed for a Gemini or Veo resolution that isn't covered above, or if
+Google changes the mark.
 
 **Images:** in Gemini, generate *"a completely plain pure black image,
 nothing else"* at the size you use and download the original PNG (not a
@@ -129,7 +145,7 @@ python marklift.py calibrate black_916.png --name gemini
 python marklift.py calibrate black_11.png --white white_11.png --name gemini
 ```
 
-**Videos:** generate a short clip of a black screen in Veo/Flow:
+**Videos:** generate a short clip of a black screen in Veo:
 
 ```
 python marklift.py calibrate black_clip.mp4 --name veo
@@ -180,4 +196,4 @@ the platform rules where you post (many require AI content to be labelled).
 share; keep the copyright notice.
 
 MarkLift is an independent project, not affiliated with or endorsed by Google.
-Gemini, Veo, Flow and Nano Banana are trademarks of their owners.
+Gemini and Veo are trademarks of Google LLC.
