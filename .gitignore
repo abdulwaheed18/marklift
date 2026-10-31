@@ -1,0 +1,20 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Your own files - never committed
+inbox/*
+!inbox/.gitkeep
+calibration/
+t/
+*.zip
+
+# Local setup notes
+CLAUDE_CODE_SETUP.md
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

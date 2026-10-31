@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
+  <!-- frame with a corner mark being lifted off -->
+  <g transform="translate(90 60)">
+    <rect width="240" height="180" rx="14" fill="#334155"/>
+    <path d="M0 140 L70 80 L120 120 L170 70 L240 130 L240 166 Q240 180 226 180 L14 180 Q0 180 0 166 Z" fill="#475569"/>
+    <circle cx="60" cy="45" r="18" fill="#64748b"/>
+    <path d="M204 152 Q206 140 218 138 Q206 136 204 124 Q202 136 190 138 Q202 140 204 152 Z" fill="#ffffff" opacity="0.35"/>
+    <path d="M226 112 Q228 96 244 94 Q228 92 226 76 Q224 92 208 94 Q224 96 226 112 Z" fill="url(#accent)"/>
+    <path d="M206 128 L220 112" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5"/>
+  </g>
+  <text x="400" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#f8fafc">Mark<tspan fill="url(#accent)">Lift</tspan></text>
+  <text x="404" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" fill="#cbd5e1">Batch-remove the corner sparkle from AI images and videos. Locally.</text>
+  <text x="404" y="245" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#94a3b8" letter-spacing="2">BUILT THIS WAY</text>
+</svg>
